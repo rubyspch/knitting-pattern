@@ -1,5 +1,10 @@
-/* I have the table but need to research more js/node stuff before i can do this part 
-function colourChange(){
-    "THE TD TAGS".innerHTML+="<td style='color:orange'></td>"
-};
-*/
+$(document).ready(function(){
+    $("td").on({
+        click: function(){ //when td is clicked make it orange
+            $(this).css("background-color","orange");
+        },
+        dblclick: function(){ //when td is double clicked go back to white
+            $(this).css("background-color","white");
+        }
+    })
+});
