@@ -1,3 +1,4 @@
+// Current colour section:
 var currentColour = "white";
 var button = document.getElementById("button");
 var input = document.getElementById("colourInput");
@@ -7,6 +8,7 @@ button.addEventListener("click", function(){ // When button is clicked, change b
     button.style.backgroundColor = currentColour;
 })
 
+// Background colour:
 var currentBackground = "white";
 var bgButton = document.getElementById("bgButton");
 var bgInput = document.getElementById("bgInput");
@@ -20,6 +22,7 @@ bgButton.addEventListener("click", function(){ // When bgButton is clicked, chan
     }
 })
 
+// jQuery for colour change on user clicks
 $(document).ready(function(){
     $("td").on({
         click: function(){ //when td is clicked make it orange
@@ -30,3 +33,11 @@ $(document).ready(function(){
         }
     })
 });
+
+/* Next I want to: 
+- include instructions 
+- style the page nicely
+- make colour selection a colourwheel or list the choices 
+- add input for size of the table/ number of rows 
+- look into mobile user doubleclicks.
+*/
