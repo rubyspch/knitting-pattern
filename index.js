@@ -35,9 +35,10 @@ $(document).ready(function(){
 });
 
 /* Next I want to: 
-- include instructions 
-- style the page nicely
+x include instructions 
+- style the page 
 - make colour selection a colourwheel or list the choices 
 - add input for size of the table/ number of rows 
 - look into mobile user doubleclicks.
+- number the rows
 */
