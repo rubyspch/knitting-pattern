@@ -22,6 +22,37 @@ bgButton.addEventListener("click", function(){ // When bgButton is clicked, chan
     }
 })
 
+// Grid sizing:
+var targetX = 10;
+var targetY = 10;
+var gridX = document.getElementById("grid-x");
+var gridY = document.getElementById("grid-y");
+var gridResize = document.getElementById("grid-size");
+
+//creating rows and columns
+function rowColFunct(){
+    for (let y=1;y<targetY; y++){
+        var table = document.createElement("table");
+        let tr = document.createElement("tr");
+        for (let x=0; x<targetX; x++){
+            let td = document.createElement("td")
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+        table.classList.add("table-style");
+    }
+}
+
+gridResize.addEventListener("click", function(){
+    if (gridX.value > 0 && gridY.value > 0){
+        targetX = gridX.value;
+        targetY = gridY.value;
+    }
+    rowColFunct();
+})
+
+// create table, 10 rows total, each with 10 coloumns in
+
 // jQuery for colour change on user clicks
 $(document).ready(function(){
     $("td").on({
