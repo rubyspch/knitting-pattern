@@ -1,27 +1,37 @@
 body{
     width:100%;
 }
-#table, #container{
+#table, #container, #inputDiv{
     display:flex;
+}
+#container, #inputDiv{
+    flex-direction:column;
+    align-items:center;
 }
 #container{
     height:auto;
     margin:5% 2%;
-    flex-direction:column;
-    align-items:center;
     font-family:'Mukta', sans-serif;
 }
 #table{
     justify-content: center;
+}
+#grid-size-div, #colour-change-div{
+   margin:1% 0;
 }
 button, input{
     height: 3em;
 }
 button{
     border:1px solid rgb(94, 87, 87);
+    margin:1px;
 }
 button:hover{
     border:1px ridge black;
+}
+#gridx, #gridy{
+    width:3em;
+    text-align: center;
 }
 h1, h3{
     text-align:center;
@@ -37,4 +47,19 @@ table{
 table, td,tr{
     border:1px solid black;
     border-spacing:0;
+}
+
+@media screen and (max-width:700px){
+    #colour-change-div{
+        display:grid;
+        grid-template:50% 50%/ 50% 50%;
+        gap:5%;
+        align-items: center;
+        margin: 5%;
+    }
+    #grid-size-div{
+        width:65%;
+        display:flex;
+        justify-content: space-between;
+    }
 }
