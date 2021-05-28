@@ -28,30 +28,30 @@ var targetY = 10;
 var gridX = document.getElementById("grid-x");
 var gridY = document.getElementById("grid-y");
 var gridResize = document.getElementById("grid-size");
+var displayDiv = document.getElementById("table");
 
 //creating rows and columns
 function rowColFunct(){
-    for (let y=1;y<targetY; y++){
-        var table = document.createElement("table");
-        let tr = document.createElement("tr");
-        for (let x=0; x<targetX; x++){
-            let td = document.createElement("td")
-            tr.appendChild(td);
+    var table = document.createElement("table"); //creates table
+    for (let y = 0; y < targetY; y++){
+        let tr = document.createElement("tr"); //adds tr 0 - input value times
+        for (let x = 0; x < targetX; x++){
+            let td = document.createElement("td"); 
+            tr.appendChild(td);//adds td to this tr 0 - input value time
         }
-        table.appendChild(tr);
-        table.classList.add("table-style");
+        table.appendChild(tr); // adds this tr to table, then loops again until tr = input value
     }
+    displayDiv.appendChild(table); //append the table to displayDiv
 }
 
 gridResize.addEventListener("click", function(){
-    if (gridX.value > 0 && gridY.value > 0){
+    if (gridX.value > 0 && gridY.value > 0){ //if user inputs values, targetX and targetY change, if not they both equal default value 10
         targetX = gridX.value;
         targetY = gridY.value;
     }
-    rowColFunct();
+    rowColFunct(); //call the table creation function with new targetX and targetY values
 })
 
-// create table, 10 rows total, each with 10 coloumns in
 
 // jQuery for colour change on user clicks
 $(document).ready(function(){
@@ -67,9 +67,10 @@ $(document).ready(function(){
 
 /* Next I want to: 
 x include instructions 
-- style the page 
+x style the page 
 - make colour selection a colourwheel or list the choices 
-- add input for size of the table/ number of rows 
+x add input for size of the table/ number of rows
+- add ability to colour squares on new created grids 
 - look into mobile user doubleclicks.
 - number the rows
 */
