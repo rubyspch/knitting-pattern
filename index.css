@@ -43,10 +43,6 @@ h1{
     font-size: 2em;
     margin:0px;
 }
-table{
-    width:300px;
-    height:300px;
-}
 table, td,tr{
     border:1px solid black;
     border-spacing:0;
