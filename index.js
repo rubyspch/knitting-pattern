@@ -32,6 +32,10 @@ var displayDiv = document.getElementById("table");
 
 //creating rows and columns
 function rowColFunct(){
+    if (gridX.value > 0 && gridY.value > 0){ //if user inputs values, targetX and targetY change, if not they both equal default value 10
+        targetX = gridX.value;
+        targetY = gridY.value;
+    }
     var table = document.createElement("table"); //creates table
     for (let y = 0; y < targetY; y++){
         let tr = document.createElement("tr"); //adds tr 0 - input value times
@@ -41,27 +45,21 @@ function rowColFunct(){
         }
         table.appendChild(tr); // adds this tr to table, then loops again until tr = input value
     }
-    displayDiv.appendChild(table); //append the table to displayDiv
+    table.style.width = targetX * 20; // responsive sizing for table width
+    table.style.height = targetY * 20; // responsive sizing for table height
+
+    displayDiv.replaceChild(table, displayDiv.childNodes[0]); //append the table to displayDiv
 }
 
-gridResize.addEventListener("click", function(){
-    if (gridX.value > 0 && gridY.value > 0){ //if user inputs values, targetX and targetY change, if not they both equal default value 10
-        targetX = gridX.value;
-        targetY = gridY.value;
-    }
-    rowColFunct(); //call the table creation function with new targetX and targetY values
-})
+gridResize.addEventListener("click", rowColFunct);
 
-
-// jQuery for colour change on user clicks
+// jQuery for colour change on user clicks. 
 $(document).ready(function(){
-    $("td").on({
-        click: function(){ //when td is clicked make it orange
-            $(this).css("background-color",currentColour);
-        },
-        dblclick: function(){ //when td is double clicked go back to white
-            $(this).css("background-color",currentBackground);
-        }
+    $("#table").on("click", "td", function(){ //when td is clicked make it orange
+        $(this).css("background-color",currentColour);
+    });
+    $("#table").on("dblclick", "td", function(){ //when td is double clicked go back to white
+        $(this).css("background-color",currentColour);
     })
 });
 
@@ -70,7 +68,7 @@ x include instructions
 x style the page 
 - make colour selection a colourwheel or list the choices 
 x add input for size of the table/ number of rows
-- add ability to colour squares on new created grids 
+x add ability to colour squares on new created grids ANSWER HERE: https://stackoverflow.com/questions/1359018/how-do-i-attach-events-to-dynamic-html-elements-with-jquery
 - look into mobile user doubleclicks.
 - number the rows
 */
