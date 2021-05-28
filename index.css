@@ -19,6 +19,9 @@ body{
 #grid-size-div, #colour-change-div{
    margin:1% 0;
 }
+#grid-size-div input{
+    width: 3em;
+}
 button, input{
     height: 3em;
 }
@@ -39,10 +42,6 @@ h1, h3{
 h1{
     font-size: 2em;
     margin:0px;
-}
-table{
-    width:300px;
-    height:300px;
 }
 table, td,tr{
     border:1px solid black;
