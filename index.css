@@ -19,6 +19,9 @@ body{
 #grid-size-div, #colour-change-div{
    margin:1% 0;
 }
+#grid-size-div input{
+    width: 3em;
+}
 button, input{
     height: 3em;
 }
