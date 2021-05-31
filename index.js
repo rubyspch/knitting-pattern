@@ -89,4 +89,5 @@ x add ability to colour squares on new created grids ANSWER HERE: https://stacko
 - look into mobile user doubleclicks.
 x number the rows
 - add description in github readme
+- put size grid button in front of colours and edit instructions
 */
