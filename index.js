@@ -25,30 +25,47 @@ bgButton.addEventListener("click", function(){ // When bgButton is clicked, chan
 // Grid sizing:
 var targetX = 10;
 var targetY = 10;
+var numRows = document.getElementById("number-rows");
 var gridX = document.getElementById("grid-x");
 var gridY = document.getElementById("grid-y");
 var gridResize = document.getElementById("grid-size");
 var displayDiv = document.getElementById("table");
 
-//creating rows and columns
+// Creating rows and columns
 function rowColFunct(){
-    if (gridX.value > 0 && gridY.value > 0){ //if user inputs values, targetX and targetY change, if not they both equal default value 10
+    // Define grid dimensions is user inputs a value:
+    if (gridX.value > 0){ 
         targetX = gridX.value;
-        targetY = gridY.value;
     }
-    var table = document.createElement("table"); //creates table
+    if (gridY.value > 0){
+        targetY = gridY.value;
+    } 
+    // Create table:
+    var table = document.createElement("table"); 
+    // Create rows:
     for (let y = 0; y < targetY; y++){
-        let tr = document.createElement("tr"); //adds tr 0 - input value times
+        let tr = document.createElement("tr"); 
+        table.appendChild(tr); 
+        //Create columns within the row:
         for (let x = 0; x < targetX; x++){
             let td = document.createElement("td"); 
-            tr.appendChild(td);//adds td to this tr 0 - input value time
+            tr.appendChild(td);
         }
-        table.appendChild(tr); // adds this tr to table, then loops again until tr = input value
+        // Add number headers if numRows is checked
+        if (numRows.checked===true){ 
+            let tdNum = document.createElement("th"); 
+            tdNum.appendChild(document.createTextNode(targetY - y));
+            tr.appendChild(tdNum);
+        }
     }
-    table.style.width = targetX * 20; // responsive sizing for table width
-    table.style.height = targetY * 20; // responsive sizing for table height
-
-    displayDiv.replaceChild(table, displayDiv.childNodes[0]); //append the table to displayDiv
+    // Table sizing and display
+    let xWidth = targetX;
+    if(numRows.checked===true){
+        xWidth+=1;
+    }
+    table.style.width = targetX * 20; 
+    table.style.height = targetY * 20; 
+    displayDiv.replaceChild(table, displayDiv.childNodes[0]); 
 }
 
 gridResize.addEventListener("click", rowColFunct);
@@ -59,16 +76,17 @@ $(document).ready(function(){
         $(this).css("background-color",currentColour);
     });
     $("#table").on("dblclick", "td", function(){ //when td is double clicked go back to white
-        $(this).css("background-color",currentColour);
+        $(this).css("background-color",currentBackground);
     })
 });
 
 /* Next I want to: 
 x include instructions 
 x style the page 
-- make colour selection a colourwheel or list the choices 
+- make input types color and number 
 x add input for size of the table/ number of rows
 x add ability to colour squares on new created grids ANSWER HERE: https://stackoverflow.com/questions/1359018/how-do-i-attach-events-to-dynamic-html-elements-with-jquery
 - look into mobile user doubleclicks.
-- number the rows
+x number the rows
+- add description in github readme
 */
