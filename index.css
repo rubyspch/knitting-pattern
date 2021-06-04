@@ -16,11 +16,9 @@ mbody{
 #table{
     justify-content: center;
 }
-#grid-size-div, #colour-change-div{
-   margin:1% 0;
-}
 #grid-size-div input{
     width: 3em;
+    margin: 5px;
 }
 #row-num-div{
     display:flex;
@@ -31,7 +29,24 @@ mbody{
     height:10px;
     margin:0;
     margin-left:5px;
-
+}
+#colour-change-div{
+    display:flex;
+}
+.colour-change{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:20px;
+}
+.colour-change input, .colour-change button{
+    margin:5px;
+}
+.colour-change input{
+    width:75px;
+}
+.colour-change button{
+    width:100px;
 }
 button, input{
     height: 3em;
@@ -75,13 +90,13 @@ th{
 }
 
 @media screen and (max-width:700px){
-    #colour-change-div{
+    /* #colour-change-div{
         display:grid;
         grid-template:50% 50%/ 50% 50%;
         gap:5%;
         align-items: center;
         margin: 5%;
-    }
+    } */
     #grid-size-div{
         width:100%;
         display:flex;
