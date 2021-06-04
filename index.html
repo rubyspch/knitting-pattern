@@ -16,20 +16,20 @@
         </header>
         <article id="user-guide">
             <h3>How to use:</h3>
-            <p>This web page is intended to be used to create a grid for a knitting pattern. You can find <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">a list of the supported colour names here.</a></p>
+            <p>This web page is intended to be used to create a grid for a knitting pattern.</p>
             <ol>
                 <li>Add the dimensions of the required pattern square, stitches x rows</li>
-                <li>Enter your main pattern colour in the space and click 'Change background'</li>
-                <li>Enter your secondary colour and  click 'Change colour'</li>
+                <li>Select your main pattern colour above 'Main colour' then click the button to set it</li>
+                <li>Enter your secondary colour and  click the button to set it</li>
                 <li>Now you can click the squares you wish to change to your secondary colour to create your pattern</li>
                 <li>You can change the colour as many times as you need to create your pattern</li>
             </ol>
         </article>
         <div id="inputDiv">
             <div id="grid-size-div">
-                <input id="grid-x" type="text" placeholder="10">
+                <input id="grid-x" type="number" placeholder="10"> 
                 <span>x</span>
-                <input id="grid-y" type="text" placeholder="10">
+                <input id="grid-y" type="number" placeholder="10">
                 <button id="grid-size">Resize pattern square</button> 
             </div>
             <div id="row-num-div">
@@ -37,10 +37,14 @@
                 <input type="checkbox" name="number-rows" id="number-rows" value="include">
             </div>
             <div id="colour-change-div">
-                <input id="bgInput" type="text" placeholder="Enter background colour">
-                <button id="bgButton">Change background</button> 
-                <input id="colourInput" type="text" placeholder="Enter colour">
-                <button id="button">Change colour</button><br> 
+                <div class="colour-change">
+                    <input id="bgInput" type="color"  value="#FFFFFF">
+                    <button id="bgButton">Main colour</button> 
+                </div>
+                <div class="colour-change">
+                    <input id="colourInput" type="color" value="#FFFFFF">
+                    <button id="button">Secondary colour</button><br>
+                </div>   
             </div>
         </div>
     </div>
