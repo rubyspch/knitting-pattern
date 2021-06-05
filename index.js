@@ -1,8 +1,8 @@
 // Current colour section:
-var currentColour = "white";
-var button = document.getElementById("button");
-var input = document.getElementById("colourInput");
-var allTD = document.getElementsByTagName("td");
+let currentColour = "white";
+const button = document.getElementById("button");
+const input = document.getElementById("colourInput");
+const allTD = document.getElementsByTagName("td");
 
 button.addEventListener("click", function(){ // When button is clicked, change button background and currentColour to inputted value
     currentColour = input.value;
@@ -10,9 +10,9 @@ button.addEventListener("click", function(){ // When button is clicked, change b
 })
 
 // Background colour:
-var currentBackground = "white";
-var bgButton = document.getElementById("bgButton");
-var bgInput = document.getElementById("bgInput");
+let currentBackground = "white";
+const bgButton = document.getElementById("bgButton");
+const bgInput = document.getElementById("bgInput");
 
 bgButton.addEventListener("click", function(){ // When bgButton is clicked, change colour of button and all tds to inputted value
     currentBackground = bgInput.value;
@@ -37,13 +37,13 @@ document.querySelector("body").addEventListener("dblclick", function(){ //when y
 }) 
 
 // Grid sizing:
-var targetX = 10;
-var targetY = 10;
-var numRows = document.getElementById("number-rows");
-var gridX = document.getElementById("grid-x");
-var gridY = document.getElementById("grid-y");
-var gridResize = document.getElementById("grid-size");
-var displayDiv = document.getElementById("table");
+let targetX = 10;
+let targetY = 10;
+const numRows = document.getElementById("number-rows");
+const gridX = document.getElementById("grid-x");
+const gridY = document.getElementById("grid-y");
+const gridResize = document.getElementById("grid-size");
+const displayDiv = document.getElementById("table");
 
 // Creating rows and columns
 function rowColFunct(){
