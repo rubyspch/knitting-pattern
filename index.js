@@ -9,17 +9,6 @@ button.addEventListener("click", function(){ // When button is clicked, change b
     button.style.backgroundColor = currentColour;
 })
 
-// jQuery for colour change on user clicks. 
-// $(document).ready(function(){
-//     $("#table").on("click", "td", function(){ //when td is clicked make it orange
-//         $(this).css("background-color",currentColour);
-//     });
-//     $("#table").on("dblclick", "td", function(){ //when td is double clicked go back to white
-//         $(this).css("background-color",currentBackground);
-//     });
-// });
-
-
 // Background colour:
 var currentBackground = "white";
 var bgButton = document.getElementById("bgButton");
@@ -33,13 +22,19 @@ bgButton.addEventListener("click", function(){ // When bgButton is clicked, chan
     }
 })
 
-//when you click a td it turns current colour, but if its current colour, make it background color
-document.querySelector("body").addEventListener("click", function(){
-    var tdTest = event.target;
+document.querySelector("body").addEventListener("click", function(){ //when you click a td it turns current colour
+    let tdTest = event.target;
     if (tdTest.tagName === "TD"){
         tdTest.style.backgroundColor = currentColour;
     }
-})
+}) 
+
+document.querySelector("body").addEventListener("dblclick", function(){ //when you dblclick a td it turns background colour
+    let tdTest = event.target;
+    if (tdTest.tagName === "TD"){
+        tdTest.style.backgroundColor = currentBackground;
+    }
+}) 
 
 // Grid sizing:
 var targetX = 10;
@@ -100,4 +95,16 @@ x look into mobile user doubleclicks.
 x number the rows
 - add description in github readme
 x put size grid button in front of colours and edit instructions
+
+Previous jQuery code:
+// jQuery for colour change on user clicks. 
+// $(document).ready(function(){
+//     $("#table").on("click", "td", function(){ //when td is clicked make it orange
+//         $(this).css("background-color",currentColour);
+//     });
+//     $("#table").on("dblclick", "td", function(){ //when td is double clicked go back to white
+//         $(this).css("background-color",currentBackground);
+//     });
+// });
+
 */
