@@ -77,17 +77,17 @@ $(document).ready(function(){
     });
     $("#table").on("dblclick", "td", function(){ //when td is double clicked go back to white
         $(this).css("background-color",currentBackground);
-    })
+    });
 });
 
 /* Next I want to: 
 x include instructions 
 x style the page 
-- make input types color and number 
+x make input types color and number 
 x add input for size of the table/ number of rows
 x add ability to colour squares on new created grids ANSWER HERE: https://stackoverflow.com/questions/1359018/how-do-i-attach-events-to-dynamic-html-elements-with-jquery
-- look into mobile user doubleclicks.
+x look into mobile user doubleclicks.
 x number the rows
 - add description in github readme
-- put size grid button in front of colours and edit instructions
+x put size grid button in front of colours and edit instructions
 */
