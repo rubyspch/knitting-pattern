@@ -85,6 +85,12 @@ function rowColFunct(){
 gridResize.addEventListener("click", rowColFunct);
 
 
+$("#grid-size").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#table").offset().top},
+        'slow');
+});
+
 /* Next I want to: 
 x include instructions 
 x style the page 
