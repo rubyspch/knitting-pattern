@@ -1,27 +1,26 @@
-mbody{
+body{
     width:100%;
+    font-family:'Mukta', sans-serif;
 }
-#table, #container, #inputDiv{
+#table, #container, #inputDiv, #user-guide, #row-num-div, #style{
     display:flex;
 }
-#container, #inputDiv{
+#container, #inputDiv, #user-guide{
     flex-direction:column;
     align-items:center;
 }
-#container{
-    height:auto;
-    margin:5% 2%;
-    font-family:'Mukta', sans-serif;
+#container, #style{
+    margin:25vh 0;
 }
-#table{
-    justify-content: center;
+#style{
+    align-items:center;
+    justify-content: space-evenly
 }
 #grid-size-div input{
     width: 3em;
     margin: 5px;
 }
 #row-num-div{
-    display:flex;
     align-items:center;
     font-size: 10px;
 }
@@ -30,18 +29,19 @@ mbody{
     margin:0;
     margin-left:5px;
 }
-#colour-change-div{
+ #colour-change-div{
     display:flex;
+    flex-direction:column;
 }
 .colour-change{
     display:flex;
     flex-direction:column;
     align-items:center;
-    margin-top:20px;
-}
-.colour-change input, .colour-change button{
+    /* margin-top:20px; */
+} 
+/* .colour-change input, .colour-change button{
     margin:5px;
-}
+} */
 .colour-change input{
     width:75px;
 }
@@ -60,9 +60,8 @@ button:hover{
 }
 #gridx, #gridy{
     width:3em;
-    text-align: center;
 }
-h1, h3{
+h1, h3, #gridx, #gridy{
     text-align:center;
 }
 h1{
@@ -97,10 +96,10 @@ th{
         align-items: center;
         margin: 5%;
     } */
-    #grid-size-div{
+    /* #grid-size-div{
         width:100%;
         display:flex;
         justify-content: space-evenly;
         align-items: center;
-    }
+    } */
 }
