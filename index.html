@@ -3,53 +3,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <h1>Click below to start...</h1>
+        <i class="fas fa-border-all fa-2x"></i>
+    </header>
     <div id="container">
-        <header>
-            <h1>Knitting Pattern Creator</h1>
-        </header>
         <article id="user-guide">
-            <h3>How to use:</h3>
-            <p>This web page is intended to be used to create a grid for a knitting pattern.</p>
-            <ol>
-                <li>Add the dimensions of the required pattern square, stitches x rows</li>
-                <li>Select your main pattern colour above 'Main colour' then click the button to set it</li>
-                <li>Enter your secondary colour and  click the button to set it</li>
-                <li>Now you can click the squares you wish to change to your secondary colour to create your pattern</li>
-                <li>You can change the colour as many times as you need to create your pattern</li>
-            </ol>
+            <h2>Create your grid</h2>
+            <p>Add the dimensions of the required pattern square, stitches x rows</p>
         </article>
         <div id="inputDiv">
             <div id="grid-size-div">
                 <input id="grid-x" type="number" placeholder="10"> 
                 <span>x</span>
                 <input id="grid-y" type="number" placeholder="10">
-                <button id="grid-size">Resize pattern square</button> 
+                <button id="grid-size">Create grid</button> 
             </div>
             <div id="row-num-div">
                 <label for="number-rows">Include row numbers</label>
                 <input type="checkbox" name="number-rows" id="number-rows" value="include">
             </div>
-            <div id="colour-change-div">
-                <div class="colour-change">
-                    <input id="bgInput" type="color"  value="#FFFFFF">
-                    <button id="bgButton">Main colour</button> 
-                </div>
-                <div class="colour-change">
-                    <input id="colourInput" type="color" value="#FFFFFF">
-                    <button id="button">Secondary colour</button><br>
-                </div>   
-            </div>
         </div>
     </div>
-    <div id="table">
+    <div id="style">
+        <div id="colour-change-div">
+            <h2>Style your grid</h2>
+            <div class="colour-change">
+                <input id="bgInput" type="color"  value="#FFFFFF">
+                <button id="bgButton">Main colour</button> 
+            </div>
+            <div class="colour-change">
+                <input id="colourInput" type="color" value="#FFFFFF">
+                <button id="button">Secondary colour</button><br>
+            </div>   
+        </div>
+        <div id="table">
+        </div>
     </div>
     <script src="index.js"></script>
+    <footer>
+        <p>Created by Ruby Chohan</p>
+    </footer>
 </body>
 </html>
