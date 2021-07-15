@@ -84,17 +84,17 @@ function rowColFunct(){
 
 gridResize.addEventListener("click", rowColFunct);
 
-// Scrolls to next sections
-$("#grid-size").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#style").offset().top +90},
-        'slow');
-});
-$("i").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#container").offset().top +90},
-        'slow');
-});
+// // Scrolls to next sections
+// $("#grid-size").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $("#style").offset().top -100},
+//         'slow');
+// });
+// $("h1").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $("#container").offset().top -100},
+//         'slow');
+// });
 
 /* Next I want to: 
 x include instructions 
