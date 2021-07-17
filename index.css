@@ -1,82 +1,79 @@
 body{
-    width:100%;
-    height:100%;
-    font-family:'Trebuchet MS', sans-serif;
-    background-image: repeating-linear-gradient(90deg, rgb(255,102,152) 0%, rgb(255,102,152) 3%, rgb(255,179,102) 3%, rgb(255,179,102) 6%, rgb(255,255,102) 6%, rgb(255,255,102) 9%, rgb(152,255,102) 9%, rgb(152,255,102) 12%, rgb(102,152,255) 12%, rgb(102,152,255) 15%, rgb(255, 251, 200) 15%, rgb(255, 251, 200) 100%);
+    margin:0;
+    width:200vw;
+    height:100vh;
+    display: flex;
 }
-#table, #container, #inputDiv, #user-guide, #row-num-div, #style, header, #colour-change-div, .colour-change{
+.colour{
+    position:absolute;
+    right:0px;
+    height:50px;
+    width:200vw;
+    background-image: repeating-linear-gradient(200deg, rgb(255,102,152) 0%, rgb(255,102,152) 5%, rgb(255,179,102) 5%, rgb(255,179,102) 10%, rgb(255,255,102) 10%, rgb(255,255,102) 15%, rgb(152,255,102) 15%, rgb(152,255,102) 20%, rgb(102,152,255) 20%, rgb(102,152,255) 25%, rgb(255, 255, 255) 25%, rgb(255, 255, 255) 100%);
+}
+.arrow{
+    font-size:3em;
+    position:absolute;
+    right:50px;
+    bottom:50px;
+}
+header{
     display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-linear-gradient(110deg, rgb(255,102,152) 0%, rgb(255,102,152) 3%, rgb(255,179,102) 3%, rgb(255,179,102) 6%, rgb(255,255,102) 6%, rgb(255,255,102) 9%, rgb(152,255,102) 9%, rgb(152,255,102) 12%, rgb(102,152,255) 12%, rgb(102,152,255) 15%, rgb(255, 255, 255) 15%, rgb(255, 255, 255) 100%);
 }
-#container, #inputDiv, #user-guide, header{
-    flex-direction:column;
-    align-items:center;
+header h1{
+    font-size: 4em;
+    width:750px;
 }
-#container, #style, header{
-    width:80%;
-    padding:40vh 0 40vh 15%;
+header #header-ps{
+    font-size:2em;
+    width:750px;
+    text-align: right;
+}
+header, #container, #style{
+    width:100vw;
+    height:100vh;
+}
+main{
+    overflow: scroll;
+}
+#container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: repeating-linear-gradient(230deg, rgb(255,102,152) 0%, rgb(255,102,152) 5%, rgb(255,179,102) 5%, rgb(255,179,102) 10%, rgb(255,255,102) 10%, rgb(255,255,102) 15%, rgb(152,255,102) 15%, rgb(152,255,102) 20%, rgb(102,152,255) 20%, rgb(102,152,255) 25%, rgb(255, 255, 255) 25%, rgb(255, 255, 255) 100%);
+}
+#container #user-guide{
+    margin-bottom: 10vh;
+}
+#container h2, #style h2{
+    font-size: 3em;
+}
+#container p{
+    font-size: 2em;
+}
+#container #grid-x, #container #grid-y{
+    width: 5.5em;
+    height:3vw;
+    margin: 0px 10px 5px 10px;
+}
+#container #row-num-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #style{
-    align-items:center;
-    justify-content: space-evenly
-}
-footer{
-    height:20px;
-    width:100vw;
-    background-color: #ff6698;
-    margin:0;
-    font-size:10px;
-}
-footer p{
-    padding:3px;
-}
-#grid-size-div input{
-    width: 3em;
-    margin: 5px;
-}
-#row-num-div{
-    align-items:center;
-    font-size: 10px;
-}
-#number-rows{
-    height:10px;
-    margin:0;
-    margin-left:5px;
-}
-#colour-change-div{
-    flex-direction:column;
-}
-.colour-change{
-    flex-direction:column;
-    align-items:center;
-} 
-.colour-change input{
-    width:75px;
-}
-.colour-change button{
-    width:100px;
-}
-button, input{
-    height: 3em;
-}
-button{
-    border:1px solid rgb(94, 87, 87);
-    margin:1px;
-}
-button:hover{
-    border:1px ridge black;
-}
-#gridx, #gridy{
-    width:3em;
-}
-h1, h3, #gridx, #gridy, footer, p{
     text-align:center;
-}
-h1, h2, p{
-    color:#424447;
-}
-h1{
-    font-size: 2em;
-    margin:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: repeating-linear-gradient(350deg, rgb(255,102,152) 0%, rgb(255,102,152) 3%, rgb(255,179,102) 3%, rgb(255,179,102) 6%, rgb(255,255,102) 6%, rgb(255,255,102) 9%, rgb(152,255,102) 9%, rgb(152,255,102) 12%, rgb(102,152,255) 12%, rgb(102,152,255) 15%, rgb(255, 255, 255) 15%, rgb(255, 255, 255) 100%);
 }
 td,tr{
     border:1px solid black;
@@ -98,23 +95,22 @@ th{
     font-size:10px;
 }
 @keyframes animate {
-    0% {color: #ff6698;}
-    20% {color: #ffb366;}
-    40% {color: #ffff66;}
-    60% {color: #98ff66;}
-    80% {color: #6698ff;}
-    100% {color: #ff6698;}
+    0% {color: #000000;}
+    50% {color: #000000;}
+    65% {color: #ffffff;}
+    100% {color: #000000;}
   }
-i{
+span{
     animation-name: animate;
-    animation-duration: 10s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
-    margin-top:2%;
 }
-i:hover, button:hover{
+span:hover, button:hover{
     cursor: pointer;
 }
-
+#style span{
+    font-size:3em;
+}
 @media screen and (max-width:700px){
     /* #colour-change-div{
         display:grid;
@@ -131,3 +127,7 @@ i:hover, button:hover{
     } */
 }
 /* color scheme link https://www.color-hex.com/color-palette/5083 */
+
+/* Creat grid button doesn't scroll but on click the arrow button lights up or jiggles or something to tell user to click to start designing
+
+Maybe page goes right to create your grid, and from there is goes down to style your grid.*/

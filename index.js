@@ -45,6 +45,17 @@ const gridY = document.getElementById("grid-y");
 const gridResize = document.getElementById("grid-size");
 const displayDiv = document.getElementById("table");
 
+//Scroll to style div
+function scrollSty() {
+    console.log("scrollSty()");
+    document
+        .getElementById('style')
+        .scrollIntoView({
+            block: 'end',
+            behavior: 'smooth',
+            inline: 'center'
+        });
+    }
 // Creating rows and columns
 function rowColFunct(){
     // Define grid dimensions is user inputs a value:
@@ -80,21 +91,29 @@ function rowColFunct(){
     table.style.width = targetX * 20; 
     table.style.height = targetY * 20; 
     displayDiv.replaceChild(table, displayDiv.childNodes[0]); 
+    scrollSty();
 }
 
 gridResize.addEventListener("click", rowColFunct);
 
-// Scrolls to next sections
-$("#grid-size").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#style").offset().top +90},
-        'slow');
-});
-$("i").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#container").offset().top +90},
-        'slow');
-});
+// // Scrolls to next sections
+let styleToCon = document.getElementById("style-to-con");
+let homeToCon = document.getElementById("home-to-con");
+let main = document.getElementById("main");
+
+function scrollCon() {
+    console.log("scrollCon()");
+    document
+        .getElementById('container')
+        .scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+            inline: 'start'
+        });
+}
+
+homeToCon.addEventListener("click", scrollCon);
+styleToCon.addEventListener("click", scrollCon);
 
 /* Next I want to: 
 x include instructions 

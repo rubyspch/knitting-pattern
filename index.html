@@ -9,46 +9,57 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="colour" hidden></div>
     <header>
-        <h1>Click below to start...</h1>
-        <i class="fas fa-border-all fa-2x"></i>
+        <!-- <i class="fas fa-border-all fa-3x"></i> -->
+        <h1>Your Project - Your Design.</h1>
+        <div id="header-ps">
+            <p>Design your own pattern square with</p>
+            <p>complete creative freedom.</p>
+        </div>
+        <div class="arrow" id="home-to-con">
+            <span>></span>
+        </div>
     </header>
-    <div id="container">
-        <article id="user-guide">
-            <h2>Create your grid</h2>
-            <p>Add the dimensions for your pattern square (stitches x rows)</p>
-        </article>
-        <div id="inputDiv">
-            <div id="grid-size-div">
-                <input id="grid-x" type="number" placeholder="10"> 
-                <span>x</span>
-                <input id="grid-y" type="number" placeholder="10">
-                <button id="grid-size">Create grid</button> 
-            </div>
-            <div id="row-num-div">
-                <label for="number-rows">Include row numbers</label>
-                <input type="checkbox" name="number-rows" id="number-rows" value="include">
+    <main id="main">
+        <div id="container">
+            <article id="user-guide">
+                <h2>Create your grid</h2>
+                <p>Add the dimensions for your pattern square</p>
+            </article>
+            <div id="inputDiv">
+                <div id="grid-size-div">
+                    <input id="grid-x" type="number" placeholder="stitches"> 
+                    <span>x</span>
+                    <input id="grid-y" type="number" placeholder="rows">
+                    <button id="grid-size">Create grid</button> 
+                </div>
+                <div id="row-num-div">
+                    <label for="number-rows">Include row numbers</label>
+                    <input type="checkbox" name="number-rows" id="number-rows" value="include">
+                </div>
             </div>
         </div>
-    </div>
-    <div id="style">
-        <div id="colour-change-div">
-            <h2>Style your grid</h2>
-            <div class="colour-change">
-                <input id="bgInput" type="color"  value="#FFFFFF">
-                <button id="bgButton">Main colour</button> 
+        <div id="style">
+            <span id="style-to-con">^</span>
+            <div id="colour-change-div">
+                <h2>Style your grid</h2>
+                <div class="colour-change">
+                    <input id="bgInput" type="color"  value="#FFFFFF">
+                    <button id="bgButton">Main colour</button> 
+                </div>
+                <div class="colour-change">
+                    <input id="colourInput" type="color" value="#FFFFFF">
+                    <button id="button">Secondary colour</button><br>
+                </div>   
             </div>
-            <div class="colour-change">
-                <input id="colourInput" type="color" value="#FFFFFF">
-                <button id="button">Secondary colour</button><br>
-            </div>   
+            <div id="table">
+            </div>
         </div>
-        <div id="table">
-        </div>
-    </div>
+        <footer>
+            <p>Created by Ruby Chohan</p>
+        </footer>
+    </main>
     <script src="index.js"></script>
-    <footer>
-        <p>Created by Ruby Chohan</p>
-    </footer>
 </body>
 </html>
