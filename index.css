@@ -1,93 +1,7 @@
-/* body{
-    width:100%;
-    height:100%;
-    font-family:'Trebuchet MS', sans-serif;
-    background-image: repeating-linear-gradient(90deg, rgb(255,102,152) 0%, rgb(255,102,152) 3%, rgb(255,179,102) 3%, rgb(255,179,102) 6%, rgb(255,255,102) 6%, rgb(255,255,102) 9%, rgb(152,255,102) 9%, rgb(152,255,102) 12%, rgb(102,152,255) 12%, rgb(102,152,255) 15%, rgb(255, 251, 218) 15%, rgb(255, 251, 218) 100%);
-}
-#table, #container, #inputDiv, #user-guide, #row-num-div, #style, header, #colour-change-div, .colour-change{
-    display:flex;
-}
-#container, #inputDiv, #user-guide, header{
-    flex-direction:column;
-    align-items:center;
-}
-#container, header{
-    width:60%;
-    margin:40vh 0 50vh 25%;
-}
-header{
-    /* box-shadow: 10px 10px 10px 10px rgb(255,255,255);
-    background-color: rgb(255,255,255); */
-/* }
-#style{
-    align-items:center;
-    justify-content: space-evenly;
-    width:80%;
-    margin:40vh 0 40vh 15%;
-}
-footer{
-    height:20px;
-    width:100vw;
-    background-color: #ff6698;
-    margin:0;
-    font-size:10px;
-}
-footer p{
-    padding:3px;
-}
-#grid-size-div input{
-    width: 3em;
-    margin: 5px;
-}
-#row-num-div{
-    align-items:center;
-    font-size: 10px;
-}
-#number-rows{
-    height:10px;
-    margin:0;
-    margin-left:5px;
-}
-#colour-change-div{
-    flex-direction:column;
-}
-.colour-change{
-    flex-direction:column;
-    align-items:center;
-} 
-.colour-change input{
-    width:75px;
-}
-.colour-change button{
-    width:100px;
-}
-button, input{
-    height: 3em;
-}
-button{
-    border:1px solid rgb(94, 87, 87);
-    margin:1px;
-}
-button:hover{
-    border:1px ridge black;
-}
-#gridx, #gridy{
-    width:3em;
-}
-h1, h3, #gridx, #gridy, footer, p{
-    text-align:center;
-}
-h1, h2, p{
-    color:#424447;
-}
-h1{
-    font-size: 3em;
-    margin:0px; */
-/* } */
 body{
     margin:0;
     width:200vw;
-    height:200vh;
+    height:100vh;
     display: flex;
 }
 .colour{
@@ -96,7 +10,6 @@ body{
     height:50px;
     width:200vw;
     background-image: repeating-linear-gradient(200deg, rgb(255,102,152) 0%, rgb(255,102,152) 5%, rgb(255,179,102) 5%, rgb(255,179,102) 10%, rgb(255,255,102) 10%, rgb(255,255,102) 15%, rgb(152,255,102) 15%, rgb(152,255,102) 20%, rgb(102,152,255) 20%, rgb(102,152,255) 25%, rgb(255, 255, 255) 25%, rgb(255, 255, 255) 100%);
-    /* z-index:-1; */
 }
 .arrow{
     font-size:3em;
@@ -123,6 +36,9 @@ header #header-ps{
 header, #container, #style{
     width:100vw;
     height:100vh;
+}
+main{
+    overflow: scroll;
 }
 #container{
     display:flex;
@@ -152,6 +68,7 @@ header, #container, #style{
     align-items: center;
 }
 #style{
+    text-align:center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,22 +95,22 @@ th{
     font-size:10px;
 }
 @keyframes animate {
-    0% {color: #ff6698;}
-    20% {color: #ffb366;}
-    40% {color: #ffff66;}
-    60% {color: #98ff66;}
-    80% {color: #6698ff;}
-    100% {color: #ff6698;}
+    0% {color: #000000;}
+    50% {color: #000000;}
+    65% {color: #ffffff;}
+    100% {color: #000000;}
   }
-i{
+span{
     animation-name: animate;
-    animation-duration: 10s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
-h1:hover, button:hover{
+span:hover, button:hover{
     cursor: pointer;
 }
-
+#style span{
+    font-size:3em;
+}
 @media screen and (max-width:700px){
     /* #colour-change-div{
         display:grid;
