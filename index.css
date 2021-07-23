@@ -26,11 +26,11 @@ header{
 }
 header h1{
     font-size: 4em;
-    width:750px;
+    max-width:750px;
 }
 header #header-ps{
     font-size:2em;
-    width:750px;
+    max-width:750px;
     text-align: right;
 }
 header, #container, #style{
@@ -117,8 +117,17 @@ span:hover, button:hover{
 #colour-change-div{
     margin-bottom: 20px;;
 }
-@media screen and (max-width:700px){
-   
+@media screen and (max-width:760px){
+   header, #header-ps{
+       width:100vw;
+   }
+   header h1{
+        font-size: 7vw;
+   }
+   #header-ps p{
+       font-size:5vw;
+       text-align: center;
+   }
 }
 /* color scheme link https://www.color-hex.com/color-palette/5083 */
 
