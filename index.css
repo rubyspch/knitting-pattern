@@ -111,20 +111,14 @@ span:hover, button:hover{
 #style span{
     font-size:3em;
 }
+.colour-change{
+    margin:5px;
+}
+#colour-change-div{
+    margin-bottom: 20px;;
+}
 @media screen and (max-width:700px){
-    /* #colour-change-div{
-        display:grid;
-        grid-template:50% 50%/ 50% 50%;
-        gap:5%;
-        align-items: center;
-        margin: 5%;
-    } */
-    /* #grid-size-div{
-        width:100%;
-        display:flex;
-        justify-content: space-evenly;
-        align-items: center;
-    } */
+   
 }
 /* color scheme link https://www.color-hex.com/color-palette/5083 */
 
