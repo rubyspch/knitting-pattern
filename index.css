@@ -59,7 +59,7 @@ main{
 }
 #container #grid-x, #container #grid-y{
     width: 5.5em;
-    height:3vw;
+    height:5vh;
     margin: 0px 10px 5px 10px;
 }
 #container #row-num-div{
@@ -118,19 +118,15 @@ span:hover, button:hover{
     margin-bottom: 20px;;
 }
 @media screen and (max-width:760px){
-   header, #header-ps{
-       width:100vw;
+   header, #header-ps, #user-guide{
+       min-width:100vw;
    }
-   header h1{
+   header h1, #user-guide h2{
         font-size: 7vw;
    }
-   #header-ps p{
+   #header-ps p, #user-guide p{
        font-size:5vw;
        text-align: center;
    }
 }
 /* color scheme link https://www.color-hex.com/color-palette/5083 */
-
-/* Creat grid button doesn't scroll but on click the arrow button lights up or jiggles or something to tell user to click to start designing
-
-Maybe page goes right to create your grid, and from there is goes down to style your grid.*/
