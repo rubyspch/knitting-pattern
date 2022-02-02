@@ -98,7 +98,6 @@ gridResize.addEventListener("click", rowColFunct);
 
 // // Scrolls to next sections
 let styleToCon = document.getElementById("style-to-con");
-let homeToCon = document.getElementById("home-to-con");
 let main = document.getElementById("main");
 
 function scrollCon() {
@@ -112,29 +111,9 @@ function scrollCon() {
         });
 }
 
-homeToCon.addEventListener("click", scrollCon);
 styleToCon.addEventListener("click", scrollCon);
 
-/* Next I want to: 
-x include instructions 
-x style the page 
-x make input types color and number 
-x add input for size of the table/ number of rows
-x add ability to colour squares on new created grids ANSWER HERE: https://stackoverflow.com/questions/1359018/how-do-i-attach-events-to-dynamic-html-elements-with-jquery
-x look into mobile user doubleclicks.
-x number the rows
-- add description in github readme
-x put size grid button in front of colours and edit instructions
-
-Previous jQuery code:
-// jQuery for colour change on user clicks. 
-// $(document).ready(function(){
-//     $("#table").on("click", "td", function(){ //when td is clicked make it orange
-//         $(this).css("background-color",currentColour);
-//     });
-//     $("#table").on("dblclick", "td", function(){ //when td is double clicked go back to white
-//         $(this).css("background-color",currentBackground);
-//     });
-// });
-
+/* TODO LIST
+- style buttons and colour wheel
+- Find better font
 */
