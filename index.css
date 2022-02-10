@@ -1,6 +1,8 @@
 body{
     margin:0;
     display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 .colour{
     position:absolute;
@@ -28,24 +30,51 @@ main{
     text-align: center;
     background-image: repeating-linear-gradient(230deg, rgb(255,102,152) 0%, rgb(255,102,152) 5%, rgb(255,179,102) 5%, rgb(255,179,102) 10%, rgb(255,255,102) 10%, rgb(255,255,102) 15%, rgb(152,255,102) 15%, rgb(152,255,102) 20%, rgb(102,152,255) 20%, rgb(102,152,255) 25%, rgb(255, 255, 255) 25%, rgb(255, 255, 255) 100%);
 }
-#container #user-guide{
-    margin-bottom: 10vh;
-}
 #container h2, #style h2{
-    font-size: 3em;
-}
-#container p{
-    font-size: 2em;
+    font-size: 45px;
 }
 #container #grid-x, #container #grid-y{
-    width: 5.5em;
-    height:5vh;
+    min-width: 60px;
+    min-height:60px;
+    height:8vh;
+    width:25vw;
     margin: 0px 10px 5px 10px;
+    text-align: center;
 }
 #container #row-num-div{
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+input[type=checkbox]{
+    margin-top: 5.5px;
+}
+#grid-size{
+    min-width: 100px;
+    min-height:50px;
+    border: solid 2px;
+    border-radius: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:18px;
+}
+#button, #bgButton{
+    height:40px;
+    width:120px
+}
+input[type=color]{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 1px black solid;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+input[type=color]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
 }
 #style{
     min-height:100vh;
@@ -98,20 +127,20 @@ span:hover, button:hover{
 }
 .colour-change{
     margin:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colour-change button{
+    margin-left: 20px;
+    border:1px black solid;
 }
 #colour-change-div{
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 @media screen and (max-width:760px){
-   header, #header-ps, #user-guide{
+    #user-guide{
        min-width:100vw;
-   }
-   header h1, #user-guide h2{
-        font-size: 7vw;
-   }
-   #header-ps p, #user-guide p{
-       font-size:5vw;
-       text-align: center;
    }
 }
 /* color scheme link https://www.color-hex.com/color-palette/5083 */
