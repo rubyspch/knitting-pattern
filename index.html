@@ -12,26 +12,26 @@
     <main id="main">
         <div id="container">
             <article id="user-guide">
-                <h2>Create your grid</h2>
-                <p>Add the dimensions for your pattern square</p>
+                <h2>Create a <br>pattern square</h2>
             </article>
             <div id="inputDiv">
                 <div id="grid-size-div">
-                    <input id="grid-x" type="number" placeholder="stitches"> 
+                    <input id="grid-x" type="number" placeholder="Stitches"> 
                     <span>x</span>
-                    <input id="grid-y" type="number" placeholder="rows">
-                    <button id="grid-size">Create grid</button> 
+                    <input id="grid-y" type="number" placeholder="Rows">
+                    <div id="row-num-div">
+                        <label for="number-rows">Include row numbers</label>
+                        <input type="checkbox" name="number-rows" id="number-rows" value="include">
+                    </div>
+                    <br><button id="grid-size">Go</button> 
                 </div>
-                <div id="row-num-div">
-                    <label for="number-rows">Include row numbers</label>
-                    <input type="checkbox" name="number-rows" id="number-rows" value="include">
-                </div>
+                
             </div>
         </div>
         <div id="style">
             <span id="style-to-con">^</span>
             <div id="colour-change-div">
-                <h2>Style your grid</h2>
+                <!-- <h2>Design your <br>pattern</h2> -->
                 <div class="colour-change">
                     <input id="bgInput" type="color"  value="#FFFFFF">
                     <button id="bgButton">Main colour</button> 
