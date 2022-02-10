@@ -1,3 +1,24 @@
+
+//Button styling
+const colours = ["rgb(255,102,152)", "rgb(255,179,102)", "rgb(255,255,102)", "rgb(152,255,102)", "rgb(102,152,255)"];
+const createGridButton = document.getElementById("grid-size");
+window.addEventListener("load", setButtonColour);
+
+function setButtonColour(){
+    let borderColour;
+    let backgroundColour
+    do{
+    borderColour = colours[randomNumber()];
+    backgroundColour = colours[randomNumber()]
+    } while(borderColour===backgroundColour);
+    createGridButton.style.borderColor= borderColour;
+    // createGridButton.style.backgroundColor=backgroundColour;
+}
+
+function randomNumber(){
+    return Math.floor(Math.random() * 5)
+}
+
 // Current colour section:
 let currentColour = "white";
 const button = document.getElementById("button");
