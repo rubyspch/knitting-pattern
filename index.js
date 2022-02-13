@@ -109,7 +109,7 @@ function rowColFunct(){
     if(numRows.checked===true){
         xWidth+=1;
     }
-    table.style.width = targetX * 20; 
+    table.style.width = targetX * 25; 
     table.style.height = targetY * 20; 
     displayDiv.replaceChild(table, displayDiv.childNodes[0]); 
     scrollSty();
